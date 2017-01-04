@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Hello World!</title>
+	<title>GitHub Issues</title>
 	<link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
@@ -10,24 +10,37 @@
 	<div class="window">
 		<div class="window-content">
 			<div class="pane-group">
-				<div class="pane-sm sidebar">
+				<div class="pane-sm sidebar draggable">
 					<nav class="nav-group">
 						<a class="nav-group-item active">
-							<svg class="nav-icon"><use xlink:href="assets/icon-github.svg#icon-github"></use></svg>
+							<svg class="svg-icon"><use xlink:href="assets/icon-github.svg#icon-github"></use></svg>
 							All
+							<span class="counter-text pull-right">12</span>
 						</a>
 						<span class="nav-group-item">
-							<svg class="nav-icon"><use xlink:href="assets/icon-open-issue.svg#icon-open-issue"></use></svg>
+							<svg class="svg-icon"><use xlink:href="assets/icon-open-issue.svg#icon-open-issue"></use></svg>
 							Open
+							<span class="counter-text pull-right">4</span>
   						</span>
 						<span class="nav-group-item">
-							<svg class="nav-icon"><use xlink:href="assets/icon-closed-issue.svg#icon-closed-issue"></use></svg>
+							<svg class="svg-icon"><use xlink:href="assets/icon-closed-issue.svg#icon-closed-issue"></use></svg>
 							Closed
+							<span class="counter-text pull-right">8</span>
 						</span>
 					</nav>
 				</div>
-				<div class="pane">
 
+				<div class="pane">
+					<ul class="list-group">
+						<span class="draggable"></span>
+						<span class="date-label">Date</span>
+						<li class="list-group-item">
+							<div class="media-body">
+								<span class="selectable-text">Lorem ipsum dolor sit amet.</span>
+								<svg class="svg-icon pull-right"><use xlink:href="assets/icon-star.svg#icon-star"></use></svg>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

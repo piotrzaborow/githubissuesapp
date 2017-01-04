@@ -1,5 +1,7 @@
 'use strict';
 const electron = require('electron');
+var electronVibrancy = require('electron-vibrancy');
+
 
 const app = electron.app;
 
@@ -19,15 +21,14 @@ function createMainWindow() {
 	mainWindow = new electron.BrowserWindow({
 		width: 652,
 		height: 502,
-		transparent:true,
 		titleBarStyle: 'hidden-inset',
-		backgroundColor: '#2e2c29'
+		vibrancy: 'sidebar',
+        scrollBounce: true,
+        icon: __dirname + 'assets/github.ico'
 	});
 
-	mainWindow.loadURL(`file://${__dirname}/index.html`);
 
-	mainWindow.webContents.openDevTools();
-
+    mainWindow.loadURL(`file://${__dirname}/index.html`);
 
 	mainWindow.on('closed', onClosed);
 
@@ -53,6 +54,5 @@ app.on('ready', () => {
 });
 
 app.on('ready-to-show',function() {
-	var electronVibrancy = require('electron-vibrancy');
-	electronVibrancy.SetVibrancy(mainWindow, 7);
+	electronVibrancy.SetVibrancy(mainWindow, 1);
 });
