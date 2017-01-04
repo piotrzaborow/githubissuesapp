@@ -22,9 +22,7 @@ function createMainWindow() {
 		width: 652,
 		height: 502,
 		titleBarStyle: 'hidden-inset',
-		vibrancy: 'sidebar',
         scrollBounce: true,
-        icon: __dirname + 'assets/github.ico'
 	});
 
 

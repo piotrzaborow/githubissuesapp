@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>GitHub Issues</title>
-	<link rel="stylesheet" href="styles/index.css">
+	<link rel="stylesheet" href="./styles/index.css">
 </head>
-<body>
+<body class="draggable">
 
 	<div class="window">
 		<div class="window-content">
 			<div class="pane-group">
-				<div class="pane-sm sidebar draggable">
+				<div class="pane-sm sidebar">
 					<nav class="nav-group">
 						<a class="nav-group-item active">
 							<svg class="svg-icon"><use xlink:href="assets/icon-github.svg#icon-github"></use></svg>
@@ -32,12 +32,18 @@
 
 				<div class="pane">
 					<ul class="list-group">
-						<span class="draggable"></span>
 						<span class="date-label">Date</span>
 						<li class="list-group-item">
 							<div class="media-body">
 								<span class="selectable-text">Lorem ipsum dolor sit amet.</span>
-								<svg class="svg-icon pull-right"><use xlink:href="assets/icon-star.svg#icon-star"></use></svg>
+								<svg class="svg-icon pull-right star"><use xlink:href="assets/icon-star.svg#icon-star"></use></svg>
+							</div>
+						</li>
+
+						<li class="list-group-item">
+							<div class="media-body">
+								<span class="selectable-text">Lorem ipsum dolor sit amet.</span>
+								<svg class="svg-icon pull-right star"><use xlink:href="assets/icon-star.svg#icon-star"></use></svg>
 							</div>
 						</li>
 					</ul>
@@ -46,6 +52,8 @@
 		</div>
 	</div>
 
+	<script>window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');</script>
+	<script src="./scripts/star.js"></script>
 </body>
 
 </html>
